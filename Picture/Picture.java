@@ -14,6 +14,7 @@ public class Picture
 {
     private Square wall;
     private Square window;
+    private Square wall2;
     private Triangle roof;
     private Circle sun;
 
@@ -30,22 +31,48 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveVertical(80);
-        wall.changeSize(100);
-        wall.makeVisible();
-
+        
+        
+        /* empieza muro1 */
+        wall2 = new Square();
+        wall2.moveVertical(60);
+        wall2.changeColor("yellow");
+        wall2.changeSize(130,100);
+        wall2.makeVisible();
+        /* termina muro */
+        
+        /*   empieza ventana fondo */
         window = new Square();
         window.changeColor("black");
-        window.moveHorizontal(20);
-        window.moveVertical(100);
+        window.moveHorizontal(10);
+        window.changeSize(10, 30);
+        window.moveVertical(20);
         window.makeVisible();
+        /* termina ventana */
 
+        /*  empieza tech0 */
         roof = new Triangle();
-        roof.changeSize(50, 140);
-        roof.moveHorizontal(60);
-        roof.moveVertical(70);
+        roof.changeSize(50, 160);
+        roof.moveHorizontal(70);
+        roof.moveVertical(50);
         roof.makeVisible();
+        /* termina techo */
+        
+        /*  empieza arbol */
+        roof = new Triangle();
+        roof.changeSize(50, 120);
+        roof.moveHorizontal(190);
+        roof.moveVertical(150);
+        roof.makeVisible();
+        
+        /*  empieza arbolbase */
+        roof = new Triangle();
+        roof.changeSize(50, 120);
+        roof.moveHorizontal(190);
+        roof.moveVertical(180);
+        roof.makeVisible();
+        
+        /* empieza sol */
 
         sun = new Circle();
         sun.changeColor("yellow");
@@ -53,6 +80,45 @@ public class Picture
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        /* empieza sombra*/
+        sun = new Circle();
+        sun.changeColor("red");
+        sun.moveHorizontal(180);
+        sun.moveVertical(-30);
+        sun.changeSize(60);
+        sun.makeVisible();
+        /* termina sombra */
+        
+        /* empieza ventana */
+        window = new Square();
+        window.moveVertical(80);
+        window.moveHorizontal(30);
+        window.changeColor("blue");
+        window.changeSize(20,20);
+        window.makeVisible();
+        /* termina ventana */
+        
+        /* empieza ventana2 */
+        window = new Square();
+        window.moveVertical(80);
+        window.moveHorizontal(70);
+        window.changeColor("blue");
+        window.changeSize(20,20);
+        window.makeVisible();
+        /* termina ventana2 */
+        
+        /* empieza puetrta */
+        window = new Square();
+        window.moveVertical(120);
+        window.moveHorizontal(45);
+        window.changeColor("red");
+        window.changeSize(20,30);
+        window.makeVisible();
+        /* termina puerta */
+        
+        
+        /* termina sol */
     }
 
     /**
